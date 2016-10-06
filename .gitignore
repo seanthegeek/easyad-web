@@ -88,6 +88,11 @@ ENV/
 # Rope project settings
 .ropeproject
 
+# PyCharm project
+.idea
+
 # Config file
 config.py
 
+# Database
+*.db
