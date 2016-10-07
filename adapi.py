@@ -74,7 +74,6 @@ def api_call(function):
         if "api_key" not in request.args:
             return jsonify(dict(error="You must supply an api_key parameter")), 401
         try:
-            print(request.args["api_key"])
             user = APIUser.get(api_key=request.args["api_key"])
             if not user.enabled:
                 return jsonify(dict(error="This API key is disabled")), 403
